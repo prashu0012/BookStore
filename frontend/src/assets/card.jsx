@@ -8,7 +8,12 @@ export default function Card({ books,rerender, openupdateForm,handleid }) {
         handleid(books._id)
     }
     const ondelete = () => {
-        axios.delete(`https://lavender-caterpillar-tie.cyclic.app/books/${books._id}`)
+        axios.delete(`https://lavender-caterpillar-tie.cyclic.app/books/${books._id}`,{
+            header: {
+                "Accept": "application/json, form-data",
+                "Content-Type": "application/json"
+            }
+        })
         .then((res) => {
             alert("done!")
             rerender()

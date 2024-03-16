@@ -11,7 +11,12 @@ const Bookinit={
 export default function Update({id}) {
     const [data, setdata] = useState(Bookinit);
     useEffect(() => {
-        axios.get(`https://lavender-caterpillar-tie.cyclic.app/books/${id}`)
+        axios.get(`https://lavender-caterpillar-tie.cyclic.app/books/${id}`,{
+            header: {
+                "Accept": "application/json, form-data",
+                "Content-Type": "application/json"
+            }
+        })
             .then((res) => {
                 setdata(res.data);
             }), (error) => {
@@ -21,7 +26,12 @@ export default function Update({id}) {
     }, [])
 
     const Update=()=>{
-        axios.put(`https://lavender-caterpillar-tie.cyclic.app/books/${id}`,data)
+        axios.put(`https://lavender-caterpillar-tie.cyclic.app/books/${id}`,data,{
+            header: {
+                "Accept": "application/json, form-data",
+                "Content-Type": "application/json"
+            }
+        })
         .then((res)=>{
             alert("Done!")
         }),(error)=>{
