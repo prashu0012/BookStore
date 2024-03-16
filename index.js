@@ -26,5 +26,6 @@ dotenv.config()
 const port=process.env.PORT
 const url=process.env.url
 Connect(url)
-.then(()=>app.listen(port,()=>console.log(`listening at ${port}`)))
-,(error)=>{console.log("Error: ",error)}
+app.listen(port,()=>console.log(`listening at ${port}`))
+// .then(()=>app.listen(port,()=>console.log(`listening at ${port}`)))
+// ,(error)=>{console.log("Error: ",error)}
