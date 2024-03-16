@@ -41,7 +41,11 @@ export default function Form({ openForm, rerender }) {
             </div>
             <div className="mb-5">
                 <label htmlFor="description" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+<<<<<<< HEAD
                 <input type="text" onChange={(e) => handleinput(e)} id="description" name='description' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="About the Book.." required />
+=======
+                <input type="text" onChange={(e) => handleinput(e)} id="description" name='description' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="About the book.." required />
+>>>>>>> cc0904a5b61415b418543fa60e35502624c43640
             </div>
             <div className="mb-5">
                 <label htmlFor="genre" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Genre</label>
