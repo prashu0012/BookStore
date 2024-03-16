@@ -11,7 +11,7 @@ const Bookinit={
 export default function Update({id}) {
     const [data, setdata] = useState(Bookinit);
     useEffect(() => {
-        axios.get(`http://localhost:8000/books/${id}`)
+        axios.get(`https://lazy-red-ladybug-hose.cyclic.app/books/${id}`)
             .then((res) => {
                 setdata(res.data);
             }), (error) => {
@@ -21,7 +21,7 @@ export default function Update({id}) {
     }, [])
 
     const Update=()=>{
-        axios.put(`https://localhost:8000/books/${id}`,data)
+        axios.put(`https://lazy-red-ladybug-hose.cyclic.app/books/${id}`,data)
         .then((res)=>{
             alert("Done!")
         }),(error)=>{

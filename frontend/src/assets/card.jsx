@@ -8,7 +8,7 @@ export default function Card({ books,rerender, openupdateForm,handleid }) {
         handleid(books._id)
     }
     const ondelete = () => {
-        axios.delete(`http://localhost:8000/books/${books._id}`)
+        axios.delete(`https://lazy-red-ladybug-hose.cyclic.app/books/${books._id}`)
         .then((res) => {
             alert("done!")
             rerender()
