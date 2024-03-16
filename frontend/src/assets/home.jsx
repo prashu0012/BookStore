@@ -75,7 +75,7 @@ export default function Home() {
                 }
                 {/* update */}
                 {
-                    (updateForm) ? "" : <Update id={id} />
+                    (updateForm) ? "" : <Update id={id} rerender={rerender} openupdateForm={openupdateForm} />
                 }
 
                 {/* all books */}

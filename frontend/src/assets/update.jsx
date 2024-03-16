@@ -8,7 +8,7 @@ const Bookinit={
     author:'',
 }
 
-export default function Update({id}) {
+export default function Update({id,rerender,openupdateForm}) {
     const [data, setdata] = useState(Bookinit);
     useEffect(() => {
         axios.get(`https://fierce-deer-garters.cyclic.app/books/${id}`,{
@@ -19,6 +19,8 @@ export default function Update({id}) {
         })
             .then((res) => {
                 setdata(res.data);
+                rerender()
+                openupdateForm()
             }), (error) => {
                 alert(error);
                 Promise.reject(error);
