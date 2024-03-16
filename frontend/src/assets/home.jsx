@@ -25,7 +25,7 @@ export default function Home() {
         setid(id)
     }
     useEffect(() => {
-        axios.get('https://lazy-red-ladybug-hose.cyclic.app/books')
+        axios.get('https://lavender-caterpillar-tie.cyclic.app/books')
             .then((res) => {
                 setbooks(res.data);
             }), (error) => {

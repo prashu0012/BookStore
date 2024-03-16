@@ -23,7 +23,7 @@ app.get("*", function (_, res) {
 })
 
 dotenv.config()
-const port=process.env.PORT || 5000
+const port=process.env.PORT
 const url=process.env.url
 Connect(url)
 .then(()=>app.listen(port,()=>console.log(`listening at ${port}`)))

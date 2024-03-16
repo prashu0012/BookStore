@@ -17,7 +17,7 @@ export default function Form({openForm,rerender}) {
     }
 
     const submitdata=()=>{
-        axios.post('https://lazy-red-ladybug-hose.cyclic.app/books',data)
+        axios.post('https://lavender-caterpillar-tie.cyclic.app/books',data)
         .then((res)=>{
             // console.log(res)
             openForm()
