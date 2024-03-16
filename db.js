@@ -1,14 +1,13 @@
 import mongoose from "mongoose";
 
-const connect=async (url)=>{
+const Connect=async (url)=>{
     try{
-        await mongoose.connect(url)
-        console.log("Connected successfully!")
+        await mongoose.connect(url);
+        console.log('connected..');
         return true;
-    }catch(err){
-        console.log("Failed to connect!")
+    }catch(error){
+        console.log('Failed Error-',error);
         return false;
     }
 }
-
-export default connect;
+export default Connect;

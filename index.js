@@ -1,10 +1,10 @@
 import express from 'express'
 import bodyParser from 'body-parser';
-import Router from './routes/routes.js'
-import Connect from './db.js';
 import cors from 'cors'
 import dotenv from 'dotenv'
 import path from 'path'
+import Connect from './db.js';
+import Router from './routes/routes.js'
 
 const app=express()
 app.use(cors())
@@ -27,4 +27,4 @@ const port=process.env.PORT
 const url=process.env.url
 Connect(url)
 .then(()=>app.listen(port,()=>console.log(`listening at ${port}`)))
-.catch(error=>console.log("Error: ",error))
+,(error)=>{console.log("Error: ",error)}
