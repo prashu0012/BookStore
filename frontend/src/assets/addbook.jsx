@@ -17,7 +17,7 @@ export default function Form({ openForm, rerender }) {
     }
 
     const submitdata = () => {
-        axios.post('https://lavender-caterpillar-tie.cyclic.app/books', data, {
+        axios.post('https://fierce-deer-garters.cyclic.app/books', data, {
             header: {
                 "Accept": "application/json, form-data",
                 "Content-Type": "application/json"

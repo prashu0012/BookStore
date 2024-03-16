@@ -11,7 +11,7 @@ const Bookinit={
 export default function Update({id}) {
     const [data, setdata] = useState(Bookinit);
     useEffect(() => {
-        axios.get(`https://lavender-caterpillar-tie.cyclic.app/books/${id}`,{
+        axios.get(`https://fierce-deer-garters.cyclic.app/books/${id}`,{
             header: {
                 "Accept": "application/json, form-data",
                 "Content-Type": "application/json"
@@ -26,7 +26,7 @@ export default function Update({id}) {
     }, [])
 
     const Update=()=>{
-        axios.put(`https://lavender-caterpillar-tie.cyclic.app/books/${id}`,data,{
+        axios.put(`https://fierce-deer-garters.cyclic.app/books/${id}`,data,{
             header: {
                 "Accept": "application/json, form-data",
                 "Content-Type": "application/json"
